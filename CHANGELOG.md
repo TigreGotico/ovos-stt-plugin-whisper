@@ -1,16 +1,12 @@
 # Changelog
 
-## [0.1.0a1](https://github.com/OpenVoiceOS/ovos-stt-plugin-whisper/tree/0.1.0a1) (2024-09-13)
+## [0.1.2a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.2a1) (2025-03-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-stt-plugin-whisper/compare/0.0.1...0.1.0a1)
-
-**Implemented enhancements:**
-
-- feat: models from upstream plugin [\#9](https://github.com/OpenVoiceOS/ovos-stt-plugin-whisper/pull/9) ([mikejgray](https://github.com/mikejgray))
+[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.1...0.1.2a1)
 
 **Merged pull requests:**
 
-- feat:finetuned models [\#12](https://github.com/OpenVoiceOS/ovos-stt-plugin-whisper/pull/12) ([JarbasAl](https://github.com/JarbasAl))
+- default to turbo model [\#2](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/2) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
