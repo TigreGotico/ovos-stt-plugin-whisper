@@ -18,7 +18,8 @@ class WhisperSTT(STT):
               "openai/whisper-medium.en",
               "openai/whisper-large",
               "openai/whisper-large-v2",
-              "openai/whisper-large-v3"]
+              "openai/whisper-large-v3",
+              "openai/whisper-large-v3-turbo"]
     LANGUAGES = {
         "en": "english",
         "zh": "chinese",
@@ -123,7 +124,7 @@ class WhisperSTT(STT):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        model_id = self.config.get("model") or "openai/whisper-tiny"
+        model_id = self.config.get("model") or "openai/whisper-large-v3-turbo"
         if not self.config.get("ignore_warnings", False):
             valid_model = model_id in self.MODELS
             if not valid_model:
