@@ -157,7 +157,7 @@ class WhisperSTT(STT):
         lang = language or self.lang
         lang = lang.split("-")[0]
         if lang != "auto" and lang not in self.LANGUAGES:
-            return ValueError(f"Unsupported language: {lang}")
+            raise ValueError(f"Unsupported language: {lang}")
         if lang == "auto":
             LOG.debug("Auto-detecting language")
             result = self.pipe(audio.get_wav_data())
