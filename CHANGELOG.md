@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.2a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.2a1) (2025-03-19)
+## [0.1.3a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.3a1) (2025-04-05)
 
-[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.1...0.1.2a1)
+[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.2...0.1.3a1)
 
 **Merged pull requests:**
 
-- default to turbo model [\#2](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/2) ([JarbasAl](https://github.com/JarbasAl))
+- refactor: pass lang not encoder ids [\#4](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/4) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
