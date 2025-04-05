@@ -156,14 +156,14 @@ class WhisperSTT(STT):
     def execute(self, audio, language=None):
         lang = language or self.lang
         lang = lang.split("-")[0]
-        if lang in self.LANGUAGES:
-            lang = self.LANGUAGES[lang]
-            forced_decoder_ids = self.tokenizer.get_decoder_prompt_ids(language=lang,
-                                                                       task="transcribe")
-            result = self.pipe(audio.get_wav_data(),
-                               generate_kwargs={"forced_decoder_ids": forced_decoder_ids})
-        else:
+        if lang != "auto" and lang not in self.LANGUAGES:
+            return ValueError(f"Unsupported language: {lang}")
+        if lang == "auto":
+            LOG.debug("Auto-detecting language")
             result = self.pipe(audio.get_wav_data())
+        else:
+            result = self.pipe(audio.get_wav_data(),
+                               generate_kwargs={"language":self.LANGUAGES[lang]})
         return result["text"]
 
     @property
@@ -172,8 +172,7 @@ class WhisperSTT(STT):
 
 
 if __name__ == "__main__":
-    b = WhisperSTT({"use_cuda": True,
-                    "model": "Stopwolf/distil-whisper-large-v2-pt"})
+    b = WhisperSTT({"use_cuda": True, "model": "openai/whisper-large-v3-turbo"})
 
     from speech_recognition import Recognizer, AudioFile
 
@@ -181,6 +180,6 @@ if __name__ == "__main__":
     with AudioFile(jfk) as source:
         audio = Recognizer().record(source)
 
-    a = b.execute(audio, language="en")
+    a = b.execute(audio, language="es")
     print(a)
     # And so, my fellow Americans, ask not what your country can do for you. Ask what you can do for your country.
