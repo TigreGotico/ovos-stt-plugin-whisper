@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.3a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.3a1) (2025-04-05)
+## [0.1.4a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.4a1) (2025-07-30)
 
-[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.2...0.1.3a1)
+[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.3...0.1.4a1)
 
 **Merged pull requests:**
 
-- refactor: pass lang not encoder ids [\#4](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/4) ([JarbasAl](https://github.com/JarbasAl))
+- Update requirements.txt [\#6](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/6) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
