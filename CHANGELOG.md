@@ -1,12 +1,12 @@
 # Changelog
 
-## [0.1.4a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.4a1) (2025-07-30)
+## [0.1.5a1](https://github.com/TigreGotico/ovos-stt-plugin-whisper/tree/0.1.5a1) (2025-12-18)
 
-[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.3...0.1.4a1)
+[Full Changelog](https://github.com/TigreGotico/ovos-stt-plugin-whisper/compare/0.1.4...0.1.5a1)
 
 **Merged pull requests:**
 
-- Update requirements.txt [\#6](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/6) ([JarbasAl](https://github.com/JarbasAl))
+- chore: Configure Renovate [\#8](https://github.com/TigreGotico/ovos-stt-plugin-whisper/pull/8) ([renovate[bot]](https://github.com/apps/renovate))
 
 
 
