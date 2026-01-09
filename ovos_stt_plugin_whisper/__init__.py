@@ -1,5 +1,6 @@
 import torch
 from ovos_plugin_manager.templates.stt import STT
+from ovos_plugin_manager.utils.audio import AudioData, AudioFile
 from ovos_utils.log import LOG
 from transformers import WhisperFeatureExtractor
 from transformers import WhisperForConditionalGeneration
@@ -153,7 +154,7 @@ class WhisperSTT(STT):
             stride_length_s=(4, 2)
         )
 
-    def execute(self, audio, language=None):
+    def execute(self, audio: AudioData, language: str=None):
         lang = language or self.lang
         lang = lang.split("-")[0]
         if lang != "auto" and lang not in self.LANGUAGES:
@@ -174,12 +175,10 @@ class WhisperSTT(STT):
 if __name__ == "__main__":
     b = WhisperSTT({"use_cuda": True, "model": "openai/whisper-large-v3-turbo"})
 
-    from speech_recognition import Recognizer, AudioFile
-
     jfk = "/home/miro/PycharmProjects/ovos-stt-plugin-whisper/jfk.wav"
     with AudioFile(jfk) as source:
-        audio = Recognizer().record(source)
+        audio = source.read()
 
-    a = b.execute(audio, language="es")
+    a = b.execute(audio, language="en")
     print(a)
     # And so, my fellow Americans, ask not what your country can do for you. Ask what you can do for your country.
